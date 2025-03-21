@@ -5,7 +5,7 @@ import Belunomics from "./Components/Belunomics";
 import Claim from "./Components/Claim";
 import Footer from "./Components/Footer";
 import Roadmap from "./Components/Roadmap";
-import Marquee from "./Marquee";
+import Marquee from "./Components/Marquee";
 
 const App = () => {
   return (

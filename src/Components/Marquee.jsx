@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import { image1, image2, image3, image4, image5 } from "./images";
+import { image1, image2, image3, image4, image5 } from "../images";
 
 const Marquee = () => {
   return (

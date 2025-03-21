@@ -244,7 +244,7 @@ const Presale = () => {
               padding: { xs: "6px", sm: "10px" },
               width: { xs: "100%", sm: "70px" },
               textAlign: "center",
-              border: "1px solid rgba(255, 255, 255, 0.3)",
+              border: "4px solid #88A4FE",
             }}
           >
             <Typography
@@ -276,7 +276,7 @@ const Presale = () => {
               padding: { xs: "6px", sm: "10px" },
               width: { xs: "100%", sm: "70px" },
               textAlign: "center",
-              border: "1px solid rgba(255, 255, 255, 0.3)",
+              border: "4px solid #88A4FE",
             }}
           >
             <Typography
@@ -308,7 +308,7 @@ const Presale = () => {
               padding: { xs: "6px", sm: "10px" },
               width: { xs: "100%", sm: "70px" },
               textAlign: "center",
-              border: "1px solid rgba(255, 255, 255, 0.3)",
+              border: "4px solid #88A4FE",
             }}
           >
             <Typography
@@ -340,7 +340,7 @@ const Presale = () => {
               padding: { xs: "6px", sm: "10px" },
               width: { xs: "100%", sm: "70px" },
               textAlign: "center",
-              border: "1px solid rgba(255, 255, 255, 0.3)",
+              border: "4px solid #88A4FE",
             }}
           >
             <Typography

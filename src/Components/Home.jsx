@@ -169,23 +169,26 @@ const Home = () => {
       {/* Navigation Bar - Hidden on mobile */}
       {!isMobile && (
         <AppBar
-          position="static"
+          position="fixed"
           sx={{
             backgroundColor: "black",
             boxShadow: "none",
-            zIndex: 1,
+            zIndex: 1000, // Increased zIndex to avoid overlap issues
             borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+            padding: "8px 0",
           }}
         >
           <Toolbar
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              padding: "10px 20px",
+              alignItems: "center",
+              flexWrap: "wrap", // Allows wrapping on smaller screens
+              paddingX: "20px",
               bgcolor: "#000",
             }}
           >
-            {/* Left Side: Logo and Label */}
+            {/* Left Side: Logo & Brand Name */}
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box
                 component="img"
@@ -206,7 +209,14 @@ const Home = () => {
             </Box>
 
             {/* Center: Navigation Links */}
-            <Box sx={{ display: "flex", gap: "20px" }}>
+            <Box
+              sx={{
+                display: "flex",
+                gap: "20px",
+                flexWrap: "wrap", // Makes links wrap if needed
+                justifyContent: "center",
+              }}
+            >
               {navItems.map((item) => (
                 <Button
                   key={item}
@@ -214,6 +224,11 @@ const Home = () => {
                     color: "white",
                     fontWeight: "bold",
                     fontFamily: '"Comic Sans MS", cursive, sans-serif',
+                    fontSize: "18px",
+                    transition: "color 0.3s ease-in-out",
+                    "&:hover": {
+                      color: "#00C2FF", // Light blue hover effect
+                    },
                   }}
                 >
                   {item}
@@ -221,12 +236,20 @@ const Home = () => {
               ))}
             </Box>
 
-            {/* Right Side: Social Icons & Button */}
+            {/* Right Side: Social Icons & Wallet Button */}
             <Box sx={{ display: "flex", alignItems: "center", gap: "15px" }}>
-              <IconButton sx={{ color: "white" }}>
+              <IconButton
+                sx={{ color: "white", transition: "color 0.3s" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#00C2FF")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+              >
                 <TelegramIcon />
               </IconButton>
-              <IconButton sx={{ color: "white" }}>
+              <IconButton
+                sx={{ color: "white", transition: "color 0.3s" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#00C2FF")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+              >
                 <TwitterIcon />
               </IconButton>
               <Button
@@ -236,6 +259,11 @@ const Home = () => {
                   color: "black",
                   fontWeight: "bold",
                   fontFamily: '"Comic Sans MS", cursive, sans-serif',
+                  transition: "all 0.3s ease-in-out",
+                  "&:hover": {
+                    backgroundColor: "#00C2FF",
+                    color: "white",
+                  },
                 }}
               >
                 CONNECT WALLET
@@ -332,6 +360,7 @@ const Home = () => {
               position: "relative",
               zIndex: 2,
               marginBottom: { xs: "30px", md: 0 },
+              mt: 10,
             }}
           >
             {/* Coming Soon Button */}
@@ -417,6 +446,7 @@ const Home = () => {
               justifyContent: "center",
               alignItems: { xs: "center", md: "flex-start" },
               zIndex: 3,
+              mt: 10,
             }}
           >
             <Presale />

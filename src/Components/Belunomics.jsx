@@ -117,7 +117,7 @@ const Belunomics = () => {
             variant="h4"
             sx={{
               color: "white",
-              fontWeight: "bold",
+              fontWeight: "700",
               marginBottom: "30px",
               fontFamily: '"Comic Sans MS", cursive, sans-serif',
               fontSize: { xs: "24px", md: "32px" },

@@ -4,14 +4,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Load custom font */
-@font-face {
-  font-family: "Comic Sans Custom";
-  src: url("/fonts/comic-sans.ttf") format("truetype");
-}
-
-/* Apply font */
-body {
-  font-family: "Comic Sans Custom", cursive, sans-serif;
-}

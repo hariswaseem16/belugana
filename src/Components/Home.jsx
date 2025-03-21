@@ -130,7 +130,7 @@ const Home = () => {
           sx={{
             backgroundColor: "white",
             color: "black",
-            fontWeight: "bold",
+            fontWeight: "700",
             fontFamily: '"Comic Sans MS", cursive, sans-serif',
           }}
         >
@@ -181,7 +181,7 @@ const Home = () => {
           <Toolbar
             sx={{
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: "space-evenly",
               alignItems: "center",
               flexWrap: "wrap", // Allows wrapping on smaller screens
               paddingX: "20px",
@@ -306,7 +306,7 @@ const Home = () => {
               <Typography
                 variant="h5"
                 sx={{
-                  fontWeight: "bold",
+                  fontWeight: "700",
                   color: "white",
                   fontFamily: '"Comic Sans MS", cursive, sans-serif',
                 }}

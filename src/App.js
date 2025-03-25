@@ -12,8 +12,8 @@ const App = () => {
     <Box>
       <Home />
       <Marquee />
-      <Belunomics />
       <Roadmap />
+      <Belunomics />
       <Claim />
       <Footer />
     </Box>

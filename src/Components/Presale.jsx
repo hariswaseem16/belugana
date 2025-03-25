@@ -564,7 +564,8 @@ const Presale = () => {
                 </InputAdornment>
               ),
               sx: {
-                backgroundColor: "white",
+                backgroundColor: "rgba(0, 102, 204, 0.5)",
+                border: "3px solid #fff",
                 borderRadius: "5px",
                 height: { xs: "36px", sm: "40px" },
                 fontFamily: '"Comic Sans MS", cursive, sans-serif',
@@ -593,7 +594,9 @@ const Presale = () => {
                 </InputAdornment>
               ),
               sx: {
-                backgroundColor: "white",
+                backgroundColor: "rgba(0, 102, 204, 0.4)",
+                border: "3px solid #fff",
+
                 borderRadius: "5px",
                 height: { xs: "36px", sm: "40px" },
                 fontFamily: '"Comic Sans MS", cursive, sans-serif',

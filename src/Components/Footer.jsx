@@ -30,7 +30,7 @@ const Footer = () => {
           color: "white",
           fontFamily: '"Comic Sans MS", cursive, sans-serif',
           marginBottom: "10px",
-          width: { xs: "90%", md: "50%" },
+          width: { xs: "90%", md: "60%" },
           mx: "auto",
           fontWeight: "bold",
         }}
@@ -41,7 +41,7 @@ const Footer = () => {
       </Typography>
       <Typography
         sx={{
-          fontSize: "20px",
+          fontSize: "18px",
           color: "white",
           fontWeight: "bold",
           fontFamily: '"Comic Sans MS", cursive, sans-serif',

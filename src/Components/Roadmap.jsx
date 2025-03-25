@@ -58,7 +58,7 @@ const Roadmap = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          padding: "2rem",
+          // padding: "2rem",
         }}
       >
         {/* Main Heading */}
@@ -70,7 +70,7 @@ const Roadmap = () => {
             textAlign: "center",
             marginBottom: "2rem",
             textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
-            fontSize: { xs: "1.8rem", sm: "2.2rem", md: "1.5rem" },
+            fontSize: { xs: "0.9rem", sm: "2.2rem", md: "1.5rem" },
           }}
         >
           DIFFERENCES BETWEEN BELUGANA AND OTHER PRESALES AND ROADMAP
@@ -82,7 +82,7 @@ const Roadmap = () => {
             backgroundColor: "rgba(255, 255, 255, 0.1)",
             backdropFilter: "blur(15px)",
             borderRadius: "20px",
-            padding: "5rem",
+            padding: "1rem",
             marginBottom: "2rem",
             width: "100%",
             transition:
@@ -98,7 +98,7 @@ const Roadmap = () => {
               color: "white",
               fontFamily: '"Comic Sans MS", cursive, sans-serif',
               fontWeight: "bold",
-              fontSize: { xs: "0.9rem", sm: "1.1rem", md: "1.1rem" },
+              fontSize: { xs: "0.8rem", sm: "1.1rem", md: "1.1rem" },
               textAlign: "center",
               lineHeight: 1.5,
               textShadow: "1px 1px 2px rgba(0,0,0,0.5)",

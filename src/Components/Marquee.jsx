@@ -1,38 +1,69 @@
 import React from "react";
-import { Box } from "@mui/material";
+import Marquee from "react-fast-marquee";
+import Box from "@mui/material/Box";
+
 import { image1, image2, image3, image4, image5 } from "../images";
 
-const Marquee = () => {
+// Partner logos array
+const partnerLogos = [
+  { img: image1 },
+  { img: image2 },
+  { img: image3 },
+  { img: image4 },
+  { img: image5 },
+  { img: image1 },
+  { img: image2 },
+  { img: image3 },
+  { img: image4 },
+  { img: image5 },
+];
+
+const MarqueeUi = () => {
   return (
-    <Box
-      sx={{
-        overflow: "hidden",
-        whiteSpace: "nowrap",
-        position: "relative",
-        width: "100%",
-        backgroundColor: "#8599C6", // Optional background
-        padding: "20px 0",
-      }}
-    >
+    <Box sx={{ backgroundColor: "transparent", width: "100%" }}>
       <Box
         sx={{
-          display: "inline-flex",
-          gap: "30px", // Space between images
-          animation: "marquee 30s linear infinite",
-          "@keyframes marquee": {
-            "0%": { transform: "translateX(100%)" },
-            "100%": { transform: "translateX(-100%)" },
-          },
+          background: "#8599C6",
         }}
       >
-        <img src={image1} alt="img1" style={{ height: "70px" }} />
-        <img src={image2} alt="img2" style={{ height: "70px" }} />
-        <img src={image3} alt="img3" style={{ height: "70px" }} />
-        <img src={image4} alt="img4" style={{ height: "70px" }} />
-        <img src={image5} alt="img5" style={{ height: "70px" }} />
+        <Marquee>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 2,
+              height: "150px",
+            }}
+          >
+            {partnerLogos.map((item, index) => (
+              <Box
+                key={index}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "start",
+                  marginRight: { xs: "20px", md: "48px" },
+                }}
+              >
+                <Box sx={{ width: "200px", height: "50px", mb: 5 }}>
+                  <img
+                    src={item.img}
+                    alt="partner logo"
+                    style={{
+                      width: "100%",
+                      height: "90px ",
+                      objectFit: "contain",
+                    }}
+                  />
+                </Box>
+              </Box>
+            ))}
+          </Box>
+        </Marquee>
       </Box>
     </Box>
   );
 };
 
-export default Marquee;
+export default MarqueeUi;

@@ -12,6 +12,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { dolphin, eth } from "../images";
+import Countdowntimmer from "./Countdowntimmer";
 
 const Presale = () => {
   const theme = useTheme();
@@ -20,65 +21,65 @@ const Presale = () => {
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
 
   // Set the countdown target date (e.g., 147 days, 18 hours, 52 minutes, 39 seconds from now)
-  const calculateTargetDate = () => {
-    const now = new Date();
-    const targetDate = new Date(now);
-    targetDate.setDate(now.getDate() + 147);
-    targetDate.setHours(now.getHours() + 18);
-    targetDate.setMinutes(now.getMinutes() + 52);
-    targetDate.setSeconds(now.getSeconds() + 39);
-    return targetDate;
-  };
+  // const calculateTargetDate = () => {
+  //   const now = new Date();
+  //   const targetDate = new Date(now);
+  //   targetDate.setDate(now.getDate() + 147);
+  //   targetDate.setHours(now.getHours() + 18);
+  //   targetDate.setMinutes(now.getMinutes() + 52);
+  //   targetDate.setSeconds(now.getSeconds() + 39);
+  //   return targetDate;
+  // };
 
-  // State to store the target date and remaining time
-  const [targetDate] = useState(calculateTargetDate());
-  const [timeRemaining, setTimeRemaining] = useState({
-    days: 147,
-    hours: 18,
-    minutes: 52,
-    seconds: 39,
-  });
+  // // State to store the target date and remaining time
+  // const [targetDate] = useState(calculateTargetDate());
+  // const [timeRemaining, setTimeRemaining] = useState({
+  //   days: 147,
+  //   hours: 18,
+  //   minutes: 52,
+  //   seconds: 39,
+  // });
 
-  // Function to calculate the remaining time
-  const calculateTimeRemaining = () => {
-    const now = new Date();
-    const difference = targetDate.getTime() - now.getTime();
+  // // Function to calculate the remaining time
+  // const calculateTimeRemaining = () => {
+  //   const now = new Date();
+  //   const difference = targetDate.getTime() - now.getTime();
 
-    // If the countdown is over
-    if (difference <= 0) {
-      return {
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-      };
-    }
+  //   // If the countdown is over
+  //   if (difference <= 0) {
+  //     return {
+  //       days: 0,
+  //       hours: 0,
+  //       minutes: 0,
+  //       seconds: 0,
+  //     };
+  //   }
 
-    // Calculate remaining time
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  //   // Calculate remaining time
+  //   const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  //   const hours = Math.floor(
+  //     (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  //   );
+  //   const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  //   const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    return {
-      days,
-      hours,
-      minutes,
-      seconds,
-    };
-  };
+  //   return {
+  //     days,
+  //     hours,
+  //     minutes,
+  //     seconds,
+  //   };
+  // };
 
-  // Update the countdown every second
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeRemaining(calculateTimeRemaining());
-    }, 1000);
+  // // Update the countdown every second
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setTimeRemaining(calculateTimeRemaining());
+  //   }, 1000);
 
-    // Clear the interval when the component unmounts
-    return () => clearInterval(timer);
-  }, [targetDate]);
+  //   // Clear the interval when the component unmounts
+  //   return () => clearInterval(timer);
+  // }, [targetDate]);
 
   // Placeholder images for demo purposes
 
@@ -226,7 +227,7 @@ const Presale = () => {
       </Typography>
 
       {/* Countdown Timer */}
-      <Grid
+      {/* <Grid
         container
         spacing={{ xs: 1, sm: 2 }}
         sx={{
@@ -364,7 +365,9 @@ const Presale = () => {
             </Typography>
           </Box>
         </Grid>
-      </Grid>
+      </Grid> */}
+
+      <Countdowntimmer />
 
       {/* Token Rate */}
       <Box
